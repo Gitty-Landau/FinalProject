@@ -1,5 +1,6 @@
 import "./BCLeft.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons";
 function BCLeft() {
   return (
     <div class="bottom-container__left">
@@ -38,25 +39,35 @@ function BCLeft() {
         </div>
         <table class="transaction-history">
           <tr>
-            <th>Donations</th>
-            <th>Date //</th>
+            <th>Donations </th>
+            <th>Date// </th>
             <th>Amount //</th>
             <th>Category //</th>
           </tr>
           <tr>
-            <td>// Yad Eliezer</td>
+            <td>
+              <FontAwesomeIcon icon={faCircleDollarToSlot} />
+              Yad Eliezer
+            </td>
             <td>Jan 01,2023</td>
             <td>$2,000.00</td>
             <td>// Helping the Poor</td>
           </tr>
           <tr>
-            <td>// Kollel Kever Rachel</td>
+            <td>
+              {" "}
+              <FontAwesomeIcon icon={faCircleDollarToSlot} />
+              Kollel Kever Rachel
+            </td>
             <td>Jan 04,2022</td>
             <td>$2,000.00</td>
             <td>// Torah Institutions</td>
           </tr>
           <tr>
-            <td>// Likrat Kallah</td>
+            <td>
+              {" "}
+              <FontAwesomeIcon icon={faCircleDollarToSlot} /> Likrat Kallah
+            </td>
             <td>Jan 06,2023</td>
             <td>$2,000.00</td>
             <td>// Hachnasas Kallah</td>

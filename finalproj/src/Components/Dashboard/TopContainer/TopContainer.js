@@ -1,5 +1,9 @@
 import "./TopContainer.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowUpRightFromSquare,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 function TopContainer() {
   return (
     <>
@@ -16,12 +20,11 @@ function TopContainer() {
 
         <div class="user-nav">
           <div class="user-info">
-            //
+            <FontAwesomeIcon icon={faUser} />
             <span class="user-name">Leora Waldman</span>
-            //
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             <span>Log Out</span>
           </div>
-          //
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
 import "./BCRight.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons";
 function BCRight() {
   return (
     <div class="bottom-container__right">
@@ -13,7 +14,7 @@ function BCRight() {
         <p>From Jan 01, 2023 to May 24, 2023</p>
         <div class="button-box">
           <button class="btn btn-purple">
-            //
+            <FontAwesomeIcon icon={faCircleDollarToSlot} />
             <span>Donate</span>
           </button>
         </div>
