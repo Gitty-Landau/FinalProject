@@ -77,6 +77,41 @@ function BCLeft() {
           <button class="btn btn-white ">See More..</button>
         </div>
       </div>
+      //Income History
+      <div class="box transaction-box">
+        <div class="header-container">
+          <h3 class="section-header">Income History</h3>
+        </div>
+        <table class="transaction-history">
+          <tr>
+            <th>Company</th>
+            <th>Date //</th>
+            <th>Amount //</th>
+            <th>Exempt from Ma'aser</th>
+          </tr>
+          <tr>
+            <td>// Compuskills</td>
+            <td>Jan 01,2023</td>
+            <td>$2,000.00</td>
+            <td>// Yes</td>
+          </tr>
+          <tr>
+            <td>// NerTzaddik</td>
+            <td>Jan 04,2023</td>
+            <td>$2,000.00</td>
+            <td>// No</td>
+          </tr>
+          <tr>
+            <td>// 4Ugifts</td>
+            <td>Jan 06,2023</td>
+            <td>$2,000.00</td>
+            <td>// No</td>
+          </tr>
+        </table>
+        <div class="footer-container ">
+          <button class="btn btn-white ">See More..</button>
+        </div>
+      </div>
     </div>
   );
 }
