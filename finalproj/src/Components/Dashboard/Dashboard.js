@@ -1,11 +1,11 @@
 import "./Dashboard.css";
-import TopContainer from "./TopContainer/TopContainer";
-import BottomContainer from "./BottomContainer/BottomContainer";
+import Header from "./Header/Header";
+import MainDashBoard from "./MainDashboard/MainDashboard";
 function Dashboard() {
   return (
     <main class="main-content">
-      <TopContainer></TopContainer>
-      <BottomContainer></BottomContainer>
+      <Header></Header>
+      <MainDashBoard></MainDashBoard>
     </main>
   );
 }

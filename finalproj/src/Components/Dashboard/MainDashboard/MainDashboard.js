@@ -1,7 +1,7 @@
-import "./BottomContainer.css";
+import "./MainDashboard.css";
 import BCLeft from "./BCLeft/BCLeft";
 import BCRight from "./BCRight/BCRight";
-function BottomContainer() {
+function MainDashBoard() {
   return (
     <div class="bottom-container">
       <BCLeft></BCLeft>
@@ -10,4 +10,4 @@ function BottomContainer() {
   );
 }
 
-export default BottomContainer;
+export default MainDashBoard;

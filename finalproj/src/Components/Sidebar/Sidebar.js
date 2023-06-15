@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-
+import Tab from "./Tabs/Tab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLineChart,
@@ -9,8 +9,9 @@ import {
   faGear,
   faArrowRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { useState } from "react";
 function Sidebar() {
+  const [isActive, updateActive] = useState(false);
   return (
     <div>
       <nav class="sidebar">
@@ -18,34 +19,24 @@ function Sidebar() {
           <h2 class="sidebar__logo-header">The Ma'aser App</h2>
         </div>
         <ul class="side-nav">
-          <li class="side-nav__item side-nav__item-active">
+          <Tab text={"Dashboard"} className={"side-nav__item-active"}>
             <FontAwesomeIcon icon={faHouse} />
-            <span>Dashboard</span>
-          </li>
-          <li class="side-nav__item">
+          </Tab>
+          <Tab text={"Income"}>
             <FontAwesomeIcon icon={faLineChart} />
-            <span>Income</span>
-          </li>
-          <li class="side-nav__item">
+          </Tab>
+          <Tab text={"Donations"}>
             <FontAwesomeIcon icon={faCircleDollarToSlot} />
-            <span>Donations</span>
-          </li>
-
-          <li class="side-nav__item">
+          </Tab>
+          <Tab text={"Inbox"}>
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>Inbox</span>
-          </li>
-          <li class="side-nav__item">
+          </Tab>{" "}
+          <Tab text={"Settings"}>
             <FontAwesomeIcon icon={faGear} />
-            <span>Settings</span>
-          </li>
-        </ul>
-
-        <ul class="side-nav">
-          <li class="side-nav__item last-item">
+          </Tab>{" "}
+          <Tab text={"Log Out"}>
             <FontAwesomeIcon icon={faArrowRotateLeft} />
-            <span>Log Out</span>
-          </li>
+          </Tab>
         </ul>
       </nav>
     </div>
