@@ -3,7 +3,7 @@ import Total from "../Total/Total";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleDollarToSlot } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../Button/Button";
-import PieChart from "./PieChart/PieChart";
+import PieChartCont from "./PieChartCont/PieChartCont";
 function BCRight() {
   return (
     <div class="bottom-container__right">
@@ -18,7 +18,7 @@ function BCRight() {
           </Button>
         }
       ></Total>
-      <PieChart></PieChart>
+      <PieChartCont></PieChartCont>
     </div>
   );
 }
