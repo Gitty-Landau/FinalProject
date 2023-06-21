@@ -1,0 +1,105 @@
+.bottom-container {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background-color: #f3f5f7;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px; /*fix later*/
+}
+
+.bottom-container__left {
+  width: 70%;
+}
+
+.bottom-container__right {
+  width: 30%;
+}
+
+.spending-statistics {
+  max-height: 338px;
+}
+/* -------------- BAR CHART -------------- */
+.bar-chart {
+  max-height: 223px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* -------------- HEADER -------------- */
+.header-container {
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  letter-spacing: -2%;
+}
+
+.footer-container {
+  margin-top: 20px;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  letter-spacing: -2%;
+}
+
+.section-header {
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.header-container span {
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.price {
+  line-height: 150%;
+  margin-bottom: 14px;
+}
+
+.price-currency {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #90a3bf;
+  margin-left: 8px;
+}
+
+.date-selector {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c3d4e9;
+  border-radius: 6px;
+}
+
+.right {
+  text-align: right;
+}
+
+.date-selector span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 8px;
+}
