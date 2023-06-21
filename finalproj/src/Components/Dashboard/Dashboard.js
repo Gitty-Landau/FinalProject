@@ -1,11 +1,12 @@
 import "./Dashboard.css";
 import Header from "./Header/Header";
-import MainDashBoard from "./MainDashboard/MainDashboard";
-function Dashboard() {
+
+function Dashboard(props) {
+  const ComponentArray = [<Dashboard></Dashboard>];
   return (
     <main class="main-content">
       <Header></Header>
-      <MainDashBoard></MainDashBoard>
+      {ComponentArray[props.displayTab]}
     </main>
   );
 }

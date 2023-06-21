@@ -12,7 +12,7 @@ import {
   faRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-function Sidebar() {
+function Sidebar(props) {
   const [activeKey, updateActiveKey] = useState(0);
   const tabs = [
     { text: "Dashboard", icon: faHouse, key: 0 },
@@ -33,6 +33,7 @@ function Sidebar() {
           {tabs.map(function (tab) {
             return (
               <Tab
+                tabFunc={props.tabFunc}
                 text={tab.text}
                 currentKey={tab.key}
                 clickFunc={updateActiveKey}

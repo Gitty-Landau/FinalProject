@@ -2,8 +2,6 @@ import "./History.css";
 import Button from "../../../Button/Button";
 import Trow from "./Trow/Trow";
 function History(props) {
-  console.log(Array.isArray(props.tableHeaderArr));
-
   return (
     <div class="box transaction-box">
       <div class="header-container">
