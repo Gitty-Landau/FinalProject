@@ -1,12 +1,10 @@
 import "./Tab.css";
-import { useState } from "react";
+
 function Tab(props) {
-  const [isActive, updateActive] = useState(false);
   return (
     <li
-      class={
-        isActive ? "side-nav__item" : "side-nav__item .side-nav__item-active "
-      }
+      className={props.classes}
+      onClick={() => props.clickFunc(props.currentKey)}
     >
       {props.children}
       <span>{props.text}</span>

@@ -13,15 +13,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 function Sidebar() {
-  const [isActive, updateActive] = useState(false);
+  const [activeKey, updateActiveKey] = useState(0);
   const tabs = [
-    { text: "Dashboard", icon: faHouse },
-    { text: "Income", icon: faLineChart },
-    { text: "Donations", icon: faCircleDollarToSlot },
-    { text: "Inbox", icon: faEnvelope },
-    { text: "Settings", icon: faGear },
-    { text: "Log Out", icon: faRotateLeft },
+    { text: "Dashboard", icon: faHouse, key: 0 },
+    { text: "Income", icon: faLineChart, key: 1 },
+    { text: "Donations", icon: faCircleDollarToSlot, key: 2 },
+    { text: "Inbox", icon: faEnvelope, key: 3 },
+    { text: "Settings", icon: faGear, key: 4 },
+    { text: "Log Out", icon: faRotateLeft, key: 5 },
   ];
+
   return (
     <div>
       <nav class="sidebar">
@@ -31,7 +32,16 @@ function Sidebar() {
         <ul class="side-nav">
           {tabs.map(function (tab) {
             return (
-              <Tab text={tab.text}>
+              <Tab
+                text={tab.text}
+                currentKey={tab.key}
+                clickFunc={updateActiveKey}
+                classes={
+                  tab.key == activeKey
+                    ? "side-nav__item side-nav__item-active"
+                    : "side-nav__item"
+                }
+              >
                 <FontAwesomeIcon icon={tab.icon} />
               </Tab>
             );
