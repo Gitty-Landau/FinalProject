@@ -1,0 +1,86 @@
+.bottom-container {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background-color: #f3f5f7;
+}
+.bottom-container__left {
+  width: 50%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+}
+.form_item {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-bottom: 20px;
+}
+.form_item label {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+input {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.checkbox label:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  border: black solid 1.5px;
+}
+
+.checkbox label:before {
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  font-size: 15px;
+  color: white;
+  background-color: #7c5cfc;
+  text-align: center;
+  line-height: 15px;
+  border: #7c5cfc solid 1.5px;
+}
+
+input[type="date"] {
+  border: 1.5px solid black;
+  margin: 0;
+  background-color: white;
+}
+input:focus {
+  outline: none;
+  border: #7c5cfc solid 2px;
+}
+
+.form_item Button {
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+}

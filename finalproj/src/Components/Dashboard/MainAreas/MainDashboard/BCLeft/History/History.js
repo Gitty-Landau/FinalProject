@@ -13,9 +13,8 @@ function History(props) {
   return (
     <div class="box transaction-box">
       <div class="header-container">
-        <h3 class="section-header">{props.HeaderText}</h3>
+        <h3 class="section-header">{props.headerText}</h3>
       </div>
-
       <table class="transaction-history">
         <tr>
           {props.tableHeaderArr.map(function (header) {

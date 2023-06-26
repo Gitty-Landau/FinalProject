@@ -3,6 +3,8 @@
   gap: 24px;
   padding: 32px;
   background-color: #f3f5f7;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .box {

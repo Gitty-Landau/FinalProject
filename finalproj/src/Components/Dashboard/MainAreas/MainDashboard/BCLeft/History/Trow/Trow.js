@@ -9,7 +9,7 @@ function Trow(props) {
         {props.obj.company}
       </td>
       <td>{props.obj.date}</td>
-      <td>{props.obj.amount}</td>
+      <td>${props.obj.amount}</td>
       <td>
         <FontAwesomeIcon
           className="point"
