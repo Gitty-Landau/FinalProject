@@ -59,13 +59,15 @@ function BCLeft() {
         headerText={"Donation History"}
         tableHeaderArr={donationHeaderArr}
         donationsArr={donations}
-        icon={<FontAwesomeIcon icon={faCircleDollarToSlot} />}
+        icon={faCircleDollarToSlot}
+        type="donations"
       ></History>
       <History
         headerText={"Income History"}
         tableHeaderArr={incomeHeaderArr}
         donationsArr={payments}
-        icon={<FontAwesomeIcon icon={faArrowTrendUp} />}
+        icon={faArrowTrendUp}
+        type="income"
       ></History>
     </div>
   );

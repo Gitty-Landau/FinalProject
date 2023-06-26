@@ -21,6 +21,7 @@
   border-radius: 10px;
   padding: 7px 10px;
   margin-left: 10px;
+  padding: 12px 14px 12px 14px;
 }
 
 .btn-purple {
@@ -36,4 +37,7 @@
 
 .dates {
   display: flex;
+}
+.submit-btn span {
+  padding-right: 4px;
 }
