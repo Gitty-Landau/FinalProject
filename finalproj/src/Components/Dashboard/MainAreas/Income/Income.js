@@ -17,7 +17,8 @@ function Income(props) {
           donationsArr={props.paymentArr}
           icon={<FontAwesomeIcon icon={faArrowTrendUp} />}
         ></History>
-
+      </div>
+      <div class="bottom-container__right">
         <Form
           updateArrFunc={props.updateArrFunc}
           donationsArr={props.paymentArr}

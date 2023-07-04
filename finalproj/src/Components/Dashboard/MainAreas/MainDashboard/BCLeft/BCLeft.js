@@ -10,6 +10,7 @@ function BCLeft(props) {
   return (
     <div class="bottom-container__left">
       <TotalContainer></TotalContainer>
+
       <History
         headerText={"Donation History"}
         tableHeaderArr={props.donationHeaderArr}
