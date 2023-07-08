@@ -6,11 +6,21 @@ import { useState } from "react";
 
 function App() {
   const [selectedTab, updateSelectedTab] = useState(0);
+  const [activeKey, updateActiveKey] = useState(0);
+
   console.log(selectedTab);
   return (
     <div class="container">
-      <Sidebar tabFunc={updateSelectedTab}></Sidebar>
-      <Dashboard displayTab={selectedTab}></Dashboard>
+      <Sidebar
+        activeKey={activeKey}
+        updateActiveKey={updateActiveKey}
+        tabFunc={updateSelectedTab}
+      ></Sidebar>
+      <Dashboard
+        updateActiveKey={updateActiveKey}
+        tabFunc={updateSelectedTab}
+        displayTab={selectedTab}
+      ></Dashboard>
     </div>
   );
 }

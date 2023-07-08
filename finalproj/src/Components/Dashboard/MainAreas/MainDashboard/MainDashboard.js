@@ -5,12 +5,15 @@ function MainDashBoard(props) {
   return (
     <div class="bottom-container">
       <BCLeft
+        categoryArr={props.categoryArr}
         paymentArr={props.paymentArr}
         donationsArr={props.donationsArr}
         incomeHeaderArr={props.incomeHeaderArr}
         donationHeaderArr={props.donationHeaderArr}
+        tabFunc={props.tabFunc}
+        updateActiveKey={props.updateActiveKey}
       ></BCLeft>
-      <BCRight></BCRight>
+      <BCRight categoryArr={props.categoryArr}></BCRight>
     </div>
   );
 }

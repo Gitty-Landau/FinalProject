@@ -6,24 +6,49 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import TotalContainer from "./TotalContainer/TotalContainer";
 import History from "./History/History";
+
 function BCLeft(props) {
+  function calculatePaymentSum() {
+    const sum = props.paymentArr.reduce(function (total, val) {
+      return total + val.amount;
+    }, 0);
+    return sum;
+  }
+  function calculateDonationsSum() {
+    const sum = props.donationsArr.reduce(function (total, val) {
+      return total + val.amount;
+    }, 0);
+    return sum;
+  }
+
   return (
     <div class="bottom-container__left">
+      <h2>
+        Test {calculateDonationsSum()} {calculatePaymentSum()}
+      </h2>
       <TotalContainer></TotalContainer>
 
       <History
+        tabFunc={props.tabFunc}
+        categoryArr={props.categoryArr}
         headerText={"Donation History"}
         tableHeaderArr={props.donationHeaderArr}
         donationsArr={props.donationsArr}
         icon={faCircleDollarToSlot}
         type="donations"
+        seeMoreButton={true}
+        updateActiveKey={props.updateActiveKey}
       ></History>
       <History
+        tabFunc={props.tabFunc}
+        categoryArr={props.categoryArr}
         headerText={"Income History"}
         tableHeaderArr={props.incomeHeaderArr}
         donationsArr={props.paymentArr}
         icon={faArrowTrendUp}
         type="income"
+        seeMoreButton={true}
+        updateActiveKey={props.updateActiveKey}
       ></History>
     </div>
   );

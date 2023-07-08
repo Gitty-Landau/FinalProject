@@ -1,41 +1,32 @@
 import "./Donations.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Form from "../Form/Form";
 import {
   faArrowTrendUp,
   faCircleDollarToSlot,
 } from "@fortawesome/free-solid-svg-icons";
 import History from "../MainDashboard/BCLeft/History/History";
-function Donations() {
-  const donationHeaderArr = ["Donations", "Date", "Amount", "Category"];
-
-  const donation1 = {
-    company: "Yad Eliezer",
-    date: "Jan 01, 2023",
-    amount: "$2,000",
-    category: "Helping the Poor",
-  };
-  const donation2 = {
-    company: "Kollel Kever Rachel",
-    date: "Jan 04,2022",
-    amount: "$2,000",
-    category: "Torah Institutions",
-  };
-  const donation3 = {
-    company: "Likrat Kallah",
-    date: "Jan 06,2023",
-    amount: "$2,000",
-    category: "Hachnasas Kallah",
-  };
-  const donations = [donation1, donation2, donation3];
+function Donations(props) {
   return (
     <div class="bottom-container">
       <div class="bottom-container__left">
         <History
+          categoryArr={props.categoryArr}
           headerText={"Donation History"}
-          tableHeaderArr={donationHeaderArr}
-          donationsArr={donations}
-          icon={<FontAwesomeIcon icon={faCircleDollarToSlot} />}
+          tableHeaderArr={props.headerArr}
+          donationsArr={props.donationsArr}
+          icon={faCircleDollarToSlot}
+          type="donations"
+          seeMoreButton={false}
+          deleteFunc={props.deleteFunc}
         ></History>
+      </div>
+      <div class="bottom-container__right">
+        <Form
+          categoryArr={props.categoryArr}
+          updateArrFunc={props.updateArrFunc}
+          donationsArr={props.donationsArr}
+        ></Form>
       </div>
     </div>
   );

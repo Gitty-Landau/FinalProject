@@ -9,19 +9,21 @@ import {
 import { useState } from "react";
 function Income(props) {
   return (
-    <div class="bottom-container">
+    <div class="bottom-container" id="income">
       <div class="bottom-container__left">
         <History
           headerText={"Income History"}
           tableHeaderArr={props.headerArr}
           donationsArr={props.paymentArr}
-          icon={<FontAwesomeIcon icon={faArrowTrendUp} />}
+          icon={faArrowTrendUp}
+          deleteFunc={props.deleteFunc}
         ></History>
       </div>
       <div class="bottom-container__right">
         <Form
           updateArrFunc={props.updateArrFunc}
           donationsArr={props.paymentArr}
+          additionalCategory="exempt"
         ></Form>
       </div>
     </div>

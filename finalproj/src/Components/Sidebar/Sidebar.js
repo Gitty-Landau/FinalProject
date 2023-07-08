@@ -13,7 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 function Sidebar(props) {
-  const [activeKey, updateActiveKey] = useState(0);
   const tabs = [
     { text: "Dashboard", icon: faHouse, key: 0 },
     { text: "Income", icon: faLineChart, key: 1 },
@@ -22,7 +21,6 @@ function Sidebar(props) {
     { text: "Settings", icon: faGear, key: 4 },
     { text: "Log Out", icon: faRotateLeft, key: 5 },
   ];
-
   return (
     <div>
       <nav class="sidebar">
@@ -36,9 +34,9 @@ function Sidebar(props) {
                 tabFunc={props.tabFunc}
                 text={tab.text}
                 currentKey={tab.key}
-                clickFunc={updateActiveKey}
+                clickFunc={props.updateActiveKey}
                 classes={
-                  tab.key == activeKey
+                  tab.key == props.activeKey
                     ? "side-nav__item side-nav__item-active"
                     : "side-nav__item"
                 }

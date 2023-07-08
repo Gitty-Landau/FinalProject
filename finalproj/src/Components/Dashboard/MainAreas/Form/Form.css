@@ -3,7 +3,8 @@
   border: 2px solid lightgray;
 }
 
-input {
+input,
+select {
   height: 35px;
   width: 100%;
   border-radius: 5px;
@@ -16,6 +17,12 @@ input {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+input:focus,
+select:focus,
+input[type="date"]:focus {
+  outline: none;
+  border: 2px solid #7c5cfc;
+}
 
 /*buttons*/
 
@@ -25,14 +32,17 @@ form input[type="button"] {
   text-align: center;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-bottom: 20px;
   background-color: white;
-  padding: 3=20px;
   font-weight: bold;
 }
 .form input[type="submit"]:hover,
 form input[type="button"]:hover {
   background-color: #7c5cfc;
   color: white;
+}
+.form input[type="submit"] {
+  margin-top: 35px;
 }
 /*checkBox*/
 .checkbox-container {
@@ -48,6 +58,13 @@ form input[type="button"]:hover {
   padding: 0;
   margin-right: 7px;
 }
+/*select*/
+select {
+  color: #95a5a6;
+  font-size: inherit;
+  font-family: inherit;
+}
+
 /*.
 .form_item {
   display: flex;

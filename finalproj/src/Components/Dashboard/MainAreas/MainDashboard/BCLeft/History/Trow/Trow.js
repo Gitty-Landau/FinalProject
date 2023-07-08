@@ -1,7 +1,11 @@
 import "./Trow.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import Button from "../../../../../Button/Button";
 function Trow(props) {
+  function Delete() {
+    console.log(props.obj);
+  }
   return (
     <tr>
       <td>
@@ -19,6 +23,18 @@ function Trow(props) {
         />
         {props.obj.category}
       </td>
+      {!props.seeMoreButton ? (
+        <>
+          <td onClick={() => props.deleteFunc(props.obj)}>
+            <Button text="Delete"></Button>
+          </td>
+          <td>
+            <Button text="Update"></Button>
+          </td>
+        </>
+      ) : (
+        ""
+      )}
     </tr>
   );
 }
