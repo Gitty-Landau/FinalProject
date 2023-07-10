@@ -10,7 +10,7 @@ function BCRight(props) {
       <Total
         boxWrapperClass={"box"}
         headerText={"Your Ma'aser Balance"}
-        amount={"$7823"}
+        amount={props.balance}
         bottomText={"From Jan 01, 2023 to May 24, 2023"}
         button={
           <Button text="Donate">

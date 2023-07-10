@@ -6,27 +6,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import TotalContainer from "./TotalContainer/TotalContainer";
 import History from "./History/History";
+import { useState } from "react";
 
 function BCLeft(props) {
-  function calculatePaymentSum() {
-    const sum = props.paymentArr.reduce(function (total, val) {
-      return total + val.amount;
-    }, 0);
-    return sum;
-  }
-  function calculateDonationsSum() {
-    const sum = props.donationsArr.reduce(function (total, val) {
-      return total + val.amount;
-    }, 0);
-    return sum;
-  }
-
   return (
     <div class="bottom-container__left">
-      <h2>
-        Test {calculateDonationsSum()} {calculatePaymentSum()}
-      </h2>
-      <TotalContainer></TotalContainer>
+      <TotalContainer
+        totalDonations={props.totalDonations}
+        totalIncome={props.totalIncome}
+      ></TotalContainer>
 
       <History
         tabFunc={props.tabFunc}
