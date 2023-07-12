@@ -55,7 +55,7 @@ function Form(props) {
           id="amt"
           onChange={(e) =>
             updateInputs(function (prev) {
-              return { ...prev, amount: e.target.value };
+              return { ...prev, amount: Number(e.target.value) };
             })
           }
         ></input>

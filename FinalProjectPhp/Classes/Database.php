@@ -3,11 +3,11 @@ class Database
 {
 
 
-    private $host = '50.87.180.88';
-    private $port;
+    private $host = 'localhost';
+    private $port=8889;
     private $dbname = 'MaaserApp';
-    private $user = 'Maaser';
-    private $pass = 'FSb_01nvXw=g';
+    private $user = 'root';
+    private $pass = 'root';
     private $charset = 'utf8mb4';
     protected $connection = null;
     public function __construct()
