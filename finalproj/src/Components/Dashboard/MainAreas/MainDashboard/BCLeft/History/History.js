@@ -1,16 +1,8 @@
 import "./History.css";
 import Button from "../../../../Button/Button";
 import Trow from "./Trow/Trow";
-import Donations from "../../../Donations/Donations";
-import { useState } from "react";
-function History(props) {
-  const categories = {
-    "Hachnasas Kallah": "#eb7ca6",
-    "Helping the Poor": "#ffacc8",
-    "Medical Institutions": "#cc6ff8",
-    "Torah Institutions": "#7c5cfc",
-  };
 
+function History(props) {
   function GetColor({ ...donation }) {
     if (props.type == "donations") {
       const donationObj = props.categoryArr.filter(function (item) {

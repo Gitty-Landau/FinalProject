@@ -4,8 +4,22 @@ import MainDashBoard from "./MainAreas/MainDashboard/MainDashboard";
 import Income from "./MainAreas/Income/Income";
 import Donations from "./MainAreas/Donations/Donations";
 import { useState } from "react";
+import { put, post, remove, get } from "../Fetch";
+import { useEffect } from "react";
 function Dashboard(props) {
+  const [userId, updateUserId] = useState(1);
+  async function loadDonations() {
+    let result = await get(
+      "http://localhost/FinalProject/FinalProject/FinalProjectPhp/Endpoints/GetIncome.php/?id=1"
+    );
+    console.log(result);
+  }
+
+  useEffect(() => {
+    loadDonations();
+  }, []);
   //Income
+
   const incomeHeaderArr = ["Company", "Date", "Amount", "Exempt from Ma'aser"];
 
   const payment1 = {
@@ -118,7 +132,6 @@ function Dashboard(props) {
     });
   }
 
-  console.log(donations);
   const ComponentArray = [
     <MainDashBoard
       tabFunc={props.tabFunc}

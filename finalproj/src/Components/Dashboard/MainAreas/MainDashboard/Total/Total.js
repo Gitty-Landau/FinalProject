@@ -22,12 +22,9 @@ function Total(props) {
         class="button-box"
       >
         <span>
-          {props.button}
-          {isClicked ? (
-            <a href="https://www.jewishcharities.org/">click</a>
-          ) : (
-            ""
-          )}
+          <a href="https://www.jewishcharities.org/" target="_blank">
+            {props.button}
+          </a>
         </span>
       </div>
     </div>

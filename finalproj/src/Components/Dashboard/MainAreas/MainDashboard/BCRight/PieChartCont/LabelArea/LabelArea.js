@@ -6,9 +6,9 @@ function LabelArea(props) {
       {props.categoryArr.map(function (label) {
         return (
           <Label
-            labelColorClass={`label__color ${props.categoryArr.index}`}
-            category={props.categoryArr.category}
-            amt={props.categoryArr.amt}
+            labelColorClass={label.color}
+            category={label.category}
+            amt={label.amt}
           ></Label>
         );
       })}
